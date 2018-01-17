@@ -3,7 +3,7 @@
     <extension point="xbmc.addon.repository" name="Naranjitos">
         <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/brujotv/master/Repositorio/</datadir>
+        <datadir zip="true">https://github.com/brujotv/repo-naranjitos/tree/master/Repositorio</datadir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Repositorio para todos</summary>
