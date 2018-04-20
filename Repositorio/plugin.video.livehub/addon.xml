@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
 <addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.6" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -16,18 +15,3 @@
     <platform>all</platform>
   </extension>
 </addon>
-
-<addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.1" provider-name="Naranjito">
-    <extension point="xbmc.addon.repository" name="Naranjitos">
-        <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio</datadir>
-	</extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio para todos</summary>
-        <description></description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-    </extension>
-</addon>
-</addons>
