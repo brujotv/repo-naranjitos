@@ -17,6 +17,128 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.Mongolia" name="[COLOR red]Mongolia[/COLOR]" version="1.2.0" provider-name="Momia">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Para ser mongo solo se tu mismo</summary>
+    <description lang="en">Para ser mongo solo se tu mismo</description>
+    <platform>all</platform>
+	<assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.gif</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.Naranjito"
+       name="[COLOR orange]Naranjito[/COLOR]"
+       version="1.0.0"
+       provider-name="Naranjito">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Creado por Naranjito</summary>
+    <description>Naranjito 2017</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.the-loop" name="The Loop" version="1.3" provider-name="Munkee">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="0.5.5" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+        <import addon="plugin.video.live.streamspro" version="2.8.1" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+        </extension>
+        <extension point="xbmc.service" library="service.py" start="[login|startup]">
+              </extension>
+        <extension point="xbmc.addon.metadata">
+          <summary lang="en">The Loop</summary>
+          <description lang="en">The Loop is a Sports addon made with the Jen template which is derived from BOB. Powered by Jen. </description>
+          <platform>all</platform>
+          <forum></forum>
+          <website></website>
+          <video_guide></video_guide>
+          <video_preview></video_preview>
+        </extension>
+</addon>
+
+<addon id="plugin.video.voyeur"
+       name="[COLOR red]Voyeur [/COLOR]"
+       version="1.0.0"
+       provider-name="voyeur">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Creado por voyeur</summary>
+    <description>voyeur 2017</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.1" provider-name="Naranjito">
     <extension point="xbmc.addon.repository" name="Naranjitos">
         <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
