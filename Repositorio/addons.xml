@@ -52,8 +52,8 @@
 
 <addon id="plugin.video.Naranjito"
        name="[COLOR orange]Naranjito[/COLOR]"
-       version=""
-       provider-name="Naranjito">
+       version="1.0"
+	   provider-name="Naranjito">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
