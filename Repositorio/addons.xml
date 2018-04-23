@@ -50,7 +50,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.Naranjito"
+<addon id="plugin.video.Naranjito-1.0.0"
        name="[COLOR orange]Naranjito[/COLOR]"
        version="1.0.0"
 	   provider-name="Naranjito">
