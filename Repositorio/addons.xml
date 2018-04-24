@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.cine" name="Cine" version="1.0.58" provider-name="Topo">
+<addon id="plugin.video.cine" name="Cine" version="1.0.61" provider-name="Topo">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
