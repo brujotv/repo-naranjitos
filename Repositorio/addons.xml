@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.cine" name="Cine" version="1.0.45" provider-name="Topo">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Cine</summary>
+    <description>Addon de Cine</description>
+    <disclaimer></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.6" provider-name="sClarke">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+	<import addon="plugin.video.f4mTester" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Live Hub - Bringing Live TV To Your Media Device</summary>
+    <description lang="en">Live Hub - Bringing Live TV To Your Media Device. Kodi 17+ is Recommended.</description>
+	<disclaimer lang="en">The author does not host or own any content found within this Addon. The Author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.Naranjito"
+       name="[COLOR orange]Naranjito[/COLOR]"
+       version="1.0.0"
+       provider-name="Naranjito">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Creado por Naranjito</summary>
+    <description>Naranjito 2017</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.1" provider-name="Naranjito">
+    <extension point="xbmc.addon.repository" name="Naranjitos">
+        <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio para todos</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+</addons>
