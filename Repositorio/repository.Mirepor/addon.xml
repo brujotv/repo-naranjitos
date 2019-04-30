@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.1" provider-name="Naranjito">
+<addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.2" provider-name="Naranjito">
     <extension point="xbmc.addon.repository" name="Naranjitos">
         <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
