@@ -63,8 +63,6 @@
   </extension>
 </addon>
 
-
-
 <addon id="plugin.video.deportesalacarta"
     name="Deportesalacarta"
     version="1.33"
@@ -113,6 +111,48 @@
 
     </description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kodispaintv"
+       name="[COLOR red]Kodi[/COLOR][COLOR yellow]Spain[/COLOR][COLOR red]TV[/COLOR]"
+       version="2.2"
+       provider-name="joheos11">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.livestreamer" optional="true"/>
+    <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+		<summary>Canales de la Television Española y más...</summary>
+		<description>
+		Complemento de video basado en LiveStreamsPro
+		Puedes seguirme en https://t.me/kodispain y http://konectas.es
+
+		AVISO LEGAL:
+
+		Este complemento no aloja ningun contenido mostrado.
+		Todo el contenido se encuentra libremente en internet.
+		No se acepta ninguna responsabilidad por el uso de este addon.
+
+		¡Disfruta!
+		</description>
+		<platform>all</platform>
   </extension>
 </addon>
 
@@ -197,6 +237,40 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
+<addon id="plugin.video.mundocine"
+       name="[COLOR white]Mundo[/COLOR] [COLOR grey]Cine[/COLOR]"
+       version="1.0.1"
+       provider-name="Toni clasico">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" />
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.urlresolver" />
+	<import addon="script.module.simplejson" />
+    <import addon="script.module.livestreamer" optional="true"/>
+    <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLOR white]Mundo[/COLOR] [COLOR grey]Cine[/COLOR]</summary>
+    <description lang="en">[COLOR grey]Vive todo el cine clasico.[/COLOR].</description>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
+
+
+</addon>
+
 <addon id="plugin.video.Naranjito"
        name="[COLOR orange]Naranjito[/COLOR]"
        version="1.2.0"
@@ -250,6 +324,56 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
+<addon id="plugin.video.palantir" name="[COLOR gold]Palantir[/COLOR]" version="0.0.29" provider-name="TierraMedia">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simple.downloader" version="1.9.5"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="orthanc.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.repository" name="Palantir Repo">
+        <info>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Palantiraddon/repo/master/Palantir/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>TV</summary>
+    <news>[B][COLOR gold]Estos son los cambios de la versión 0.0.29:[/B][/COLOR]
+        - Soporte urlresolver
+          [COLOR lime][B] versión 0.0.28 [/B][/COLOR]
+        - Cambios menores, arreglo de bug
+          [COLOR lime][B] versión 0.0.27 [/B][/COLOR]
+        - Cambio fanart.
+        - Posibilidad de mostrar series anime también en dibujos
+        - Funcionalidad interna para desactivar contenido que no funcione
+          [COLOR lime][B] versión 0.0.26 [/B][/COLOR]
+        - Cambio pequeño para corregir incompatibilidad con Jarvis
+          [COLOR lime][B] versión 0.0.25 [/B][/COLOR]
+        - Arreglar el error cuando se instala de 0
+          [COLOR lime][B] versión 0.0.24 [/B][/COLOR]
+        - Opción para configurar la cuenta de kbg.
+        - En el menú principal una sección dinámica Especiales (basado en sagas).
+        - En el menú dibujos añadido pelis de dibujos más vistas y pelis de dibujos más vistas en el último mes.
+        - Corregido fanart de algunas opciones que aparecían vacías.
+    </news>
+    <description>Visualiza el contenido de la nube, series, películas.</description>
+    <disclaimer>[B][COLOR red]Todo el contenido disponible en este Addon esta sacado de servidores gratuitos, disponible en la red para todos los usuarios.[/B][/COLOR]</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.gif</fanart>
+    </assets>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <addon id="plugin.video.plexus-streams"
        name="Plexus-Streams"
        version="1.0.18b"
@@ -274,18 +398,67 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
-<addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.1" provider-name="Naranjito">
-    <extension point="xbmc.addon.repository" name="Naranjitos">
-        <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio</datadir>
-	</extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio para todos</summary>
-        <description></description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
+<addon id="plugin.video.sport365.live" name="Sport365 Mod by Teco" version="2.7.2" provider-name="Bugatsinho">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.19.1"/>
+        <import addon="plugin.video.f4mTester" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
     </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Sport365 originally made by GalAnonim</summary>
+    <description lang="en">Fork version 1.0 by GalAnonim!Kindly note that Sport365 Live is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+    <disclaimer lang="en">Sport365 Live does not provide any streams of its own. Stream quality, content and copyright are responsibility of the ad-financed source web site.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <website>https://bugatsinho.github.io</website>
+    <twitter>@bugatsinho</twitter>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.png</fanart>
+  </assets>
+  <news>2.5.2 23-03-2019
+- add inputstream option for playback(settings)
+- add alternatives domains and language support
+      (https://github.com/bugatsinho/bugatsinho.github.io/pull/15)</news>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="3.2017.08.12"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="script.module.livestreamer" />
+   <!-- <import addon="script.video.F4mProxy" /> -->
+   <!-- <import addon="plugin.video.f4mTester" /> -->
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service/proxy_service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different ad-financed sports streaming sites</summary>
+    <description>Play videos of different ad-financed sports streaming sites.
+
+SportsDevil does not provide any streams of its own; stream quality, content and copyright are responsibility of the ad-financed source web site.
+
+For updates check the readme.
+    </description>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="repository.Maniac" name="Maniac repository" version="1.0.0" provider-name="Maniac">
@@ -300,5 +473,19 @@ em procura livre na internet.. Enjoy !![/COLOR]
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="repository.Mirepor" name="[COLOR orange]Repo Narajito[/COLOR]" version="1.0.2" provider-name="Naranjito">
+    <extension point="xbmc.addon.repository" name="Naranjitos">
+        <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio para todos</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
 </addon>
 </addons>
