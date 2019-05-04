@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.1x2" name="1x2" version="0.0.14" provider-name="By Teco">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.liveresolver" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <description lang="es">1x2: Es un Fork del Addon La Liga</description>
+        <disclaimer lang="es">El autor no almacena ni distribuye ninguno de los contenidos que se muestran en este addon. El autor no tiene ninguna afiliación con el proveedor de contenidos.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.avezy" name="AvEZY" version="1.4.1" provider-name="Wazzu">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
@@ -324,11 +339,29 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
-<addon id="plugin.video.palantir" name="[COLOR gold]Palantir[/COLOR]" version="0.0.29" provider-name="TierraMedia">
+<addon id="plugin.video.notbuffering"
+	   name="notbuffering"
+	   version="1.0.2"
+	   provider-name="Grupo-Netai,pepe">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Wizard</summary>
+    <description>Nuevo Instalador que modifica el addon avanced settings para que tenga tu kodi el menor buffering.</description> <!-- PEQUEÑA INTRO  -->
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.palantir" name="[COLOR gold]Palantir[/COLOR]" version="0.0.57" provider-name="TierraMedia">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.simple.downloader" version="1.9.5"/>
-    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.resolveurl" optional="true"/>
+    <import addon="script.extendedinfo" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="orthanc.py">
     <provides>video</provides>
@@ -340,23 +373,8 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>TV</summary>
-    <news>[B][COLOR gold]Estos son los cambios de la versión 0.0.29:[/B][/COLOR]
-        - Soporte urlresolver
-          [COLOR lime][B] versión 0.0.28 [/B][/COLOR]
-        - Cambios menores, arreglo de bug
-          [COLOR lime][B] versión 0.0.27 [/B][/COLOR]
-        - Cambio fanart.
-        - Posibilidad de mostrar series anime también en dibujos
-        - Funcionalidad interna para desactivar contenido que no funcione
-          [COLOR lime][B] versión 0.0.26 [/B][/COLOR]
-        - Cambio pequeño para corregir incompatibilidad con Jarvis
-          [COLOR lime][B] versión 0.0.25 [/B][/COLOR]
-        - Arreglar el error cuando se instala de 0
-          [COLOR lime][B] versión 0.0.24 [/B][/COLOR]
-        - Opción para configurar la cuenta de kbg.
-        - En el menú principal una sección dinámica Especiales (basado en sagas).
-        - En el menú dibujos añadido pelis de dibujos más vistas y pelis de dibujos más vistas en el último mes.
-        - Corregido fanart de algunas opciones que aparecían vacías.
+    <news>[COLOR lime][B] versión 0.0.57 [/B][/COLOR]
+        - [Interno] Cambios internos.
     </news>
     <description>Visualiza el contenido de la nube, series, películas.</description>
     <disclaimer>[B][COLOR red]Todo el contenido disponible en este Addon esta sacado de servidores gratuitos, disponible en la red para todos los usuarios.[/B][/COLOR]</disclaimer>
@@ -461,6 +479,37 @@ For updates check the readme.
   </extension>
 </addon>
 
+<addon id="plugin.video.torrentin" name="Torrentin" version="0.6.1" provider-name="ciberus">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Torrent player</summary>
+    <description lang="en">This add-on launches android torrent/magnet video players for playing torrent videos, also includes AceStream engine client and bridge to other torrent player plugins.</description>
+    <summary lang="es">Reproductor de torrent</summary>
+    <description lang="es">Este add-on ejecuta aplicaciones externas de Android para reproducir videos por torrent o magnet, tambien incorpora cliente para el motor Acestream (Android/Windows/Linux) y puede enlazar con otros plugins.</description>
+    <disclaimer lang="en">This KODI AddOn does not contain internal or direct links to any type of copyright video, it's only a torrent storage-redirect-player.</disclaimer>
+    <disclaimer lang="es">Este AddOn de KODI no contiene enlaces internos o directos a material protegido por copyright de ningun tipo, solamente es un Archivador-Catalogador-Reproductor-Redireccionador de archivos torrent.</disclaimer>
+    <platform>all</platform>
+    <website>https://github.com/surebic/plugin.video.torrentin</website>
+    <source>https://github.com/surebic/plugin.video.torrentin</source>
+    <forum>http://www.htcmania.com/showthread.php?t=995348</forum>
+    <license>GNU GPL. No comercial. Ver https://es.m.wikipedia.org/wiki/GNU_General_Public_License</license>
+    <assets>
+         <icon>icon.png</icon>
+         <fanart>fanart.jpg</fanart>
+         <screenshot>resources/screenshots/home.png</screenshot>
+         <screenshot>resources/screenshots/utils.png</screenshot>
+         <screenshot>resources/screenshots/maintenance.png</screenshot>
+     </assets>
+    <news>Scraper de torrents/magnets mejorado, fallos corregidos, etc.[CR]Visita el foro para mas informacion:[CR]http://www.htcmania.com/showthread.php?t=995348[CR]Gracias a todos por vuestro apoyo.</news>
+  </extension>
+</addon>
+
 <addon id="repository.balandro" name="Balandro Repo" version="1.0.3" provider-name="Balandro">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
@@ -504,6 +553,34 @@ For updates check the readme.
     <extension point="xbmc.addon.metadata">
         <summary>Repositorio para todos</summary>
         <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.netai" name="[COLOR lime]Netai[/COLOR] Repo" version="1.0.5" provider-name="Netai">
+    <extension point="xbmc.addon.repository" name="[COLOR lime]Netai[/COLOR] Repo">
+        <info>http://www.grupo-netai.org/repo/addons.xml</info>
+        <checksum>http://www.grupo-netai.org/repo/addons.xml.md5</checksum>
+        <datadir zip="true">http://www.grupo-netai.org/repo/plugins</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio para Netai addons</summary>
+        <description>Manten actualizado Atlantis, Explora, Futbol y Arena Sports en tu media center!</description>
+        <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.Netai_github" name="[COLOR lime]Netai Github[/COLOR] Repo" version="1.0.8" provider-name="Netai">
+    <extension point="xbmc.addon.repository" name="Netai Github">
+        <info>https://raw.githubusercontent.com/Andorth/Repor/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Andorth/Repor/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Andorth/Repor/master/Repositorio/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Netai Repositorio Fuente Github</summary>
+        <description>Repositorio necesario para funcionar correctamente los Addons del grupo Netai.</description>
         <disclaimer></disclaimer>
         <platform>all</platform>
     </extension>
