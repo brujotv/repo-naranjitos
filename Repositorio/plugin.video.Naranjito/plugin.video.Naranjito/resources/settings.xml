@@ -18,6 +18,7 @@
         <setting id="genesisorpulsar" type="enum" values="Genesis|Pulsar" label="Play IMDBid with:" default="Genesis"visible="false"/>
         <setting id="donotshowbychannels" label="Ocultar Canales" type="bool" default="false" visible="false"/>
   </category>
+  
   </settings>
 
 
