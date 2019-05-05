@@ -288,7 +288,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
 
 <addon id="plugin.video.Naranjito"
        name="[COLOR orange]Naranjito[/COLOR]"
-       version="1.2.0"
+       version="1.2.1"
        provider-name="Naranjito">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -308,12 +308,6 @@ em procura livre na internet.. Enjoy !![/COLOR]
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
-
-      <extension point="xbmc.addon.repository" name="Naranjitos">
-        <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio</datadir>
-	</extension>
 
   <extension point="xbmc.addon.metadata">
     <summary>Creado por Naranjito</summary>
