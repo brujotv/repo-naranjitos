@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<defaultcontrol always="true">32502</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<left>100</left>
+			<top>50</top>
+			<width>900</width>
+			<height>600</height>
+			<texture border="2">MatchCenter/ficha.png</texture>
+		</control>
+		<control type="group">
+			<control type="radiobutton" id="32502">
+				<left>950</left>
+				<top>70</top>
+				<width>48</width>
+				<height>48</height>
+				<radiowidth>48</radiowidth>
+				<radioheight>48</radioheight>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label></label>
+				<ondown>33560</ondown>
+				<onright>33560</onright>
+				<animation effect="slide" end="-70,0" time="0" condition="true">Conditional</animation>
+				<textureradioofffocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradioonnofocus>
+				<onclick>Action(close)</onclick>
+			</control>
+			<control type="image" id="33550">
+				<description>escudo</description>
+				<top>63</top>
+				<left>120</left>
+				<width>60</width>
+				<height>61</height>
+			</control>
+			<control type="label" id="33551">
+				<description>Equipo</description>
+				<top>80</top>
+				<left>120</left>
+				<width>200</width>
+				<height>25</height>
+				<align>center</align>
+				<label></label>
+				<font>font13_title</font>
+				<textcolor>red</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="image" id="33552">
+				<description>Banner</description>
+				<top>128</top>
+				<left>370</left>
+				<width>600</width>
+				<height>205</height>
+			</control>
+			<control type="label" id="33553">
+				<description>Nombre</description>
+				<top>75</top>
+				<left>350</left>
+				<width>300</width>
+				<height>30</height>
+				<align>left</align>
+				<label></label>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="image" id="33554">
+				<description>Foto</description>
+				<top>128</top>
+				<left>120</left>
+				<width>235</width>
+				<height>205</height>
+			</control>
+
+			<control type="image">
+				<description>Main Panel</description>
+				<left>120</left>
+				<top>360</top>
+				<width>862</width>
+				<height>273</height>
+				<texture colordiffuse="578FBFFF">MatchCenter/white.png</texture>
+			</control>
+			<control type="button" id="33560">
+				<description>Ficha</description>
+				<onup>32502</onup>
+				<ondown>33561</ondown>
+				<onleft>32502</onleft>
+				<onright>33561</onright>
+				<left>120</left>
+				<top>340</top>
+				<width>180</width>
+				<height>20</height>
+				<texturefocus colordiffuse="violet">MatchCenter/tab.png</texturefocus>
+				<texturenofocus>MatchCenter/tab.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<label>Ficha</label>
+				<font>font13</font>
+				<align>center</align>
+				<textoffsetx>30</textoffsetx>
+				<aligny>top</aligny>
+				<textoffsety>-3</textoffsety>
+			</control>
+			<control type="button" id="33561">
+				<description>Trayectoria</description>
+				<onup>33560</onup>
+				<ondown>33562</ondown>
+				<onleft>33560</onleft>
+				<onright>33562</onright>
+				<left>260</left>
+				<top>340</top>
+				<width>180</width>
+				<height>20</height>
+				<texturefocus colordiffuse="violet">MatchCenter/tab2.png</texturefocus>
+				<texturenofocus colordiffuse="white">MatchCenter/tab2.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<label>Trayectoria</label>
+				<align>left</align>
+				<textoffsetx>30</textoffsetx>
+				<aligny>top</aligny>
+				<textoffsety>-3</textoffsety>
+				<font>font13</font>
+			</control>
+			<control type="button" id="33562">
+				<description>Biografía</description>
+				<onup>33561</onup>
+				<ondown>33563</ondown>
+				<onleft>33561</onleft>
+				<onright>33563</onright>
+				<left>400</left>
+				<top>340</top>
+				<width>180</width>
+				<height>20</height>
+				<texturefocus colordiffuse="violet">MatchCenter/tab2.png</texturefocus>
+				<texturenofocus colordiffuse="white">MatchCenter/tab2.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<label>Biografía</label>
+				<align>left</align>
+				<textoffsetx>50</textoffsetx>
+				<aligny>top</aligny>
+				<textoffsety>-3</textoffsety>
+				<font>font13</font>
+			</control>
+			<control type="button" id="33563">
+				<description></description>
+				<onup>33562</onup>
+				<ondown>33565</ondown>
+				<onleft>33562</onleft>
+				<onright>33565</onright>
+				<left>540</left>
+				<top>340</top>
+				<width>180</width>
+				<height>20</height>
+				<texturefocus colordiffuse="violet">MatchCenter/tab2.png</texturefocus>
+				<texturenofocus colordiffuse="white">MatchCenter/tab2.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<label>Noticias</label>
+				<align>left</align>
+				<textoffsetx>50</textoffsetx>
+				<font>font13</font>
+				<aligny>top</aligny>
+				<textoffsety>-3</textoffsety>
+			</control>
+			<control type="textbox" id="33572">
+				<description>Bio</description>
+				<top>400</top>
+				<left>150</left>
+				<width>800</width>
+				<height>220</height>
+				<align>left</align>
+				<label></label>
+				<font>font10</font>
+				<textcolor>black</textcolor>
+				<pagecontrol>63</pagecontrol>
+			</control>
+			<control type="scrollbar" id="63">
+				<left>845</left>
+				<top>395</top>
+				<width>15</width>
+				<height>235</height>
+				<texturesliderbackground colordiffuse="29FFFFFF">MatchCenter/black.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="AAFFFFFF">MatchCenter/black.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="FF12B2E7">MatchCenter/black.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<onleft>33563</onleft>
+				<onright>33568</onright>
+				<ondown>33568</ondown>
+				<onup>33563</onup>
+				<visible>Control.IsVisible(33572)</visible>
+				<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+			</control>
+			<!-- Stats -->
+			<control type="list" id="33565">
+				<left>121</left>
+				<top>395</top>
+				<width>840</width>
+				<height>235</height>
+				<onup>33563</onup>
+				<ondown>61</ondown>
+				<onleft>33563</onleft>
+				<onright>61</onright>
+				<pagecontrol>61</pagecontrol>
+				<itemlayout height="39" width="840">
+					<control type="label">
+						<description>Año</description>
+						<posx>10</posx>
+						<posy>15</posy>
+						<width>40</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font10</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>Pos</description>
+						<posx>60</posx>
+						<posy>15</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(cat)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Salidas</description>
+						<posx>180</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(salidas)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Uno</description>
+						<posx>255</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(uno)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Dos</description>
+						<posx>330</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(dos)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Tres</description>
+						<posx>400</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(tres)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Total</description>
+						<posx>470</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(total)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Poles</description>
+						<posx>550</posx>
+						<posy>15</posy>
+						<width>40</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(poles)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Moto</description>
+						<posx>600</posx>
+						<posy>15</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(moto)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Puntos</description>
+						<posx>730</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(puntos)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Posicion</description>
+						<posx>800</posx>
+						<posy>15</posy>
+						<width>40</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(pos)]</label>
+						<font>font10</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="39" width="840">
+					<control type="label">
+						<description>Año</description>
+						<posx>10</posx>
+						<posy>15</posy>
+						<width>40</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font10</font>
+						<align>left</align>
+						<textcolor>red</textcolor>
+					</control>
+					<control type="label">
+						<description>Pos</description>
+						<posx>60</posx>
+						<posy>15</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(cat)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Salidas</description>
+						<posx>180</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(salidas)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Uno</description>
+						<posx>255</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(uno)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Dos</description>
+						<posx>330</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(dos)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Tres</description>
+						<posx>400</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(tres)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Total</description>
+						<posx>470</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(total)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Poles</description>
+						<posx>550</posx>
+						<posy>15</posy>
+						<width>40</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(poles)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Moto</description>
+						<posx>600</posx>
+						<posy>15</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(moto)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Puntos</description>
+						<posx>730</posx>
+						<posy>15</posy>
+						<width>60</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(puntos)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<description>Posicion</description>
+						<posx>800</posx>
+						<posy>15</posy>
+						<width>40</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(pos)]</label>
+						<font>font10</font>
+						<textcolor>red</textcolor>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>845</left>
+				<top>395</top>
+				<width>15</width>
+				<height>235</height>
+				<texturesliderbackground colordiffuse="29FFFFFF">MatchCenter/black.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="AAFFFFFF">MatchCenter/black.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="FF12B2E7">MatchCenter/black.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<onleft>33565</onleft>
+				<onright>63</onright>
+				<ondown>63</ondown>
+				<onup>33565</onup>
+				<visible>Control.IsVisible(33591)</visible>
+				<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+			</control>
+
+			<!-- Trayectoria -->
+			<control type="image" id="33591">
+				<description>Tabla cabecera</description>
+				<left>121</left>
+				<top>365</top>
+				<width>840</width>
+				<height>30</height>
+				<texture>MatchCenter/tabla_header4.png</texture>
+				<visible>!Control.IsEnabled(33561)+IsEmpty(Window(home).Property(no-trayectoria))</visible>
+			</control>
+			<control type="list" id="33568">
+				<left>121</left>
+				<top>375</top>
+				<width>870</width>
+				<height>235</height>
+				<onup>33563</onup>
+				<ondown>33569</ondown>
+				<onleft>33563</onleft>
+				<onright>33569</onright>
+				<itemlayout height="39" width="870">
+					<control type="image">
+						<left>-1</left>
+						<top>-1</top>
+						<width>870</width>
+						<height>40</height>
+						<texture>Controls/MenuItemFO.png</texture>
+					</control>
+					<control type="label">
+						<description>H0</description>
+						<posx>330</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head0)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>H1</description>
+						<posx>480</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head1)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>H2</description>
+						<posx>630</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head2)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>H3</description>
+						<posx>760</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head3)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>20</posx>
+						<posy>5</posy>
+						<width>300</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V0</description>
+						<posx>330</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v0)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V1</description>
+						<posx>480</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v1)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V2</description>
+						<posx>630</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v2)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V3</description>
+						<posx>760</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v3)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="39" width="870">
+					<control type="image">
+						<left>-1</left>
+						<top>-1</top>
+						<width>870</width>
+						<height>40</height>
+						<texture colordiffuse="red">Controls/MenuItemFO.png</texture>
+					</control>
+					<control type="label">
+						<description>H0</description>
+						<posx>330</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head0)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>H1</description>
+						<posx>480</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head1)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>H2</description>
+						<posx>630</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head2)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>H3</description>
+						<posx>760</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(head3)]</label>
+						<font>font13_title</font>
+						<align>center</align>
+						<textcolor>selected</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="label">
+						<description>Label</description>
+						<posx>20</posx>
+						<posy>5</posy>
+						<width>300</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V0</description>
+						<posx>330</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v0)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V1</description>
+						<posx>480</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v1)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V2</description>
+						<posx>630</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v2)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+					<control type="label">
+						<description>V3</description>
+						<posx>760</posx>
+						<posy>5</posy>
+						<width>120</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(v3)]</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>black</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<!-- Noticias -->
+			<control type="list" id="33570">
+				<left>121</left>
+				<top>375</top>
+				<width>840</width>
+				<height>235</height>
+				<onup>33563</onup>
+				<ondown>65</ondown>
+				<onleft>33563</onleft>
+				<onright>65</onright>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>65</pagecontrol>
+				<itemlayout height="115" width="840">
+					<control type="image">
+						<description>Ico</description>
+						<posx>20</posx>
+						<posy>10</posy>
+						<width>150</width>
+						<height>100</height>
+						<texture>$INFO[ListItem.Property(img)]</texture>
+					</control>
+					<control type="label">
+						<description>Fecha</description>
+						<posx>680</posx>
+						<posy>90</posy>
+						<width>200</width>
+						<scroll>true</scroll>
+						<height>30</height>
+						<label>$INFO[ListItem.Property(date)]</label>
+						<font>font10</font>
+						<align>left</align>
+						<textcolor>red</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Titular</description>
+						<posx>180</posx>
+						<posy>20</posy>
+						<width>660</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Property(title)]</label>
+						<font>font13_title</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Desc</description>
+						<posx>180</posx>
+						<posy>50</posy>
+						<width>640</width>
+						<height>50</height>
+						<label>$INFO[ListItem.Property(desc)]</label>
+						<font>font10</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="115" width="840">
+					<control type="image">
+						<left>-10</left>
+						<top>-15</top>
+						<width>860</width>
+						<height>150</height>
+						<texture border="40" colordiffuse="blue">MatchCenter/button-nofo.png</texture>
+						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+						<visible>Control.HasFocus(33570)</visible>
+					</control>
+					<control type="image">
+						<description>Imagen</description>
+						<posx>20</posx>
+						<posy>10</posy>
+						<width>150</width>
+						<height>100</height>
+						<texture>$INFO[ListItem.Property(img)]</texture>
+					</control>
+					<control type="label">
+						<description>Fecha</description>
+						<posx>680</posx>
+						<posy>90</posy>
+						<width>200</width>
+						<scroll>true</scroll>
+						<height>30</height>
+						<label>$INFO[ListItem.Property(date)]</label>
+						<font>font10</font>
+						<align>left</align>
+						<textcolor>red</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Titular</description>
+						<posx>180</posx>
+						<posy>20</posy>
+						<width>660</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Property(title)]</label>
+						<font>font13_title</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Desc</description>
+						<posx>180</posx>
+						<posy>50</posy>
+						<width>640</width>
+						<height>50</height>
+						<label>$INFO[ListItem.Property(desc)]</label>
+						<font>font10</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="65">
+				<left>845</left>
+				<top>375</top>
+				<width>15</width>
+				<height>235</height>
+				<texturesliderbackground colordiffuse="29FFFFFF">MatchCenter/black.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="AAFFFFFF">MatchCenter/black.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="FF12B2E7">MatchCenter/black.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<onleft>33570</onleft>
+				<onright>33563</onright>
+				<ondown>33563</ondown>
+				<onup>33570</onup>
+				<visible>IsEmpty(Window(home).Property(no-news))</visible>
+				<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+			</control>
+			<control type="image" id="33542">
+				<description>Busy animation</description>
+				<left>305</left>
+				<top>380</top>
+				<width>120</width>
+				<height>120</height>
+				<texture></texture>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" start="0" end="360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+				<visible>IsEmpty(Window(home).Property(loading-news))</visible>
+			</control>
+			<control type="label">
+				<top>420</top>
+				<left>430</left>
+				<width>200</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textcolor>black</textcolor>
+				<aligny>center</aligny>
+				<align>center</align>
+				<label>Cargando noticias...</label>
+				<visible>IsEmpty(Window(home).Property(loading-news))</visible>
+			</control>
+		</control>
+	</controls>
+</window>
