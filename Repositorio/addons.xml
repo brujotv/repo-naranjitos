@@ -96,6 +96,23 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="www.netfreex.com.br">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary>Addon necessário para o correto funcionamento do NetFreeX Play</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.Fusion.org"
        name="** [COLOR limegreen]Fusion.org[/COLOR] **"
        version="0.0.1"
@@ -168,6 +185,37 @@
 		¡Disfruta!
 		</description>
 		<platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.Lilianime"
+       name="[COLOR pink]Lili Anime[/COLOR]"
+       version="0.0.5"
+       provider-name="Lis">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" />
+    <import addon="plugin.video.youtube"  />
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video audio</provides>
+  </extension>
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Lis</summary>
+    <description>Se recomienda supervisión parental para acceder directamente a la sección infantil.Sección +16 años con escenas de desnudez fuerte y explícita, escenas fuertes,imagenes muy intensas y sangre en mucha cantidad.</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
@@ -286,6 +334,24 @@ em procura livre na internet.. Enjoy !![/COLOR]
 
 </addon>
 
+<addon id="plugin.video.musicando" name="Musicando" version="0.0.5" provider-name="Catoal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <summary lang="es">Los Mejores Videos de YouTube. </summary>
+    <description lang="es">Los videos mas destacados de la red.</description>
+    <disclaimer lang="es">
+    </disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.Naranjito"
        name="[COLOR orange]Naranjito[/COLOR]"
        version="1.2.1"
@@ -347,6 +413,25 @@ em procura livre na internet.. Enjoy !![/COLOR]
     <summary>Wizard</summary>
     <description>Nuevo Instalador que modifica el addon avanced settings para que tenga tu kodi el menor buffering.</description> <!-- PEQUEÑA INTRO  -->
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.now_music" name="Now Thats What I Call Music"	version="5.6.1"	provider-name="Catoal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="pulse.py">
+    <provides>audio video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Now Thats What I Call Music Collection</summary>
+    <description lang="en"></description>
+    <disclaimer lang="en"></disclaimer>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
   </extension>
 </addon>
 
@@ -583,34 +668,6 @@ For updates check the readme.
     </extension>
 </addon>
 
-<addon id="repository.netai" name="[COLOR lime]Netai[/COLOR] Repo" version="1.0.5" provider-name="Netai">
-    <extension point="xbmc.addon.repository" name="[COLOR lime]Netai[/COLOR] Repo">
-        <info>http://www.grupo-netai.org/repo/addons.xml</info>
-        <checksum>http://www.grupo-netai.org/repo/addons.xml.md5</checksum>
-        <datadir zip="true">http://www.grupo-netai.org/repo/plugins</datadir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio para Netai addons</summary>
-        <description>Manten actualizado Atlantis, Explora, Futbol y Arena Sports en tu media center!</description>
-        <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="repository.Netai_github" name="[COLOR lime]Netai Github[/COLOR] Repo" version="1.0.8" provider-name="Netai">
-    <extension point="xbmc.addon.repository" name="Netai Github">
-        <info>https://raw.githubusercontent.com/Andorth/Repor/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Andorth/Repor/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/Andorth/Repor/master/Repositorio/</datadir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Netai Repositorio Fuente Github</summary>
-        <description>Repositorio necesario para funcionar correctamente los Addons del grupo Netai.</description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="resource.as" name="[COLOR aqua]Merlin Auto Cleaner[/COLOR]" version="1.0.0" provider-name="Merlin Project">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -624,6 +681,32 @@ For updates check the readme.
     <description lang="en">DO NOT LAUNCH/RUN FROM MY ADD-ONS (This Will Auto Launch At Startup)</description>
 	<disclaimer lang="en">You May Disable! Configure From Within Add-On Settings</disclaimer>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.kelebek"
+       name="KELEBEK"
+       version="1.1.0"
+       provider-name="Anabel">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.pyxbmct" version="1.1.4" />
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>KELEBEK</summary>
+    <description>Scan Sources searching changes and addons</description>
+    <language></language>
+    <license></license>
+    <source></source>
+    <forum></forum>
+    <website></website>
   </extension>
 </addon>
 
