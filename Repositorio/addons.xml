@@ -504,6 +504,23 @@ For updates check the readme.
   </extension>
 </addon>
 
+<addon id="repository.alfa-addon" name="[COLOR red]Alfa-Addon[/COLOR] Repo" version="1.0.4" provider-name="Alfa Addon">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Alfa-Addon Repo">
+        <info>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml</info>
+        <checksum>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/alfa-addon/alfa-repo/raw/master</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio para Alfa-Addon</summary>
+        <description></description>
+        <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="repository.balandro" name="Balandro Repo" version="1.0.3" provider-name="Balandro">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
@@ -522,6 +539,20 @@ For updates check the readme.
         <platform>all</platform>
     </extension>
 
+</addon>
+
+<addon id="repository.CanalNereo" name="[COLOR lime]Repo Canal Nereo[/COLOR] Repo" version="1.0.2" provider-name="Canal Nereo">
+    <extension point="xbmc.addon.repository" name="Mi repositorio">
+        <info>https://raw.githubusercontent.com/canalnereo/RepoCanalNereo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/canalnereo/RepoCanalNereo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/canalnereo/RepoCanalNereo/master/Repositorio/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio para Mi</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="repository.Maniac" name="Maniac repository" version="1.0.0" provider-name="Maniac">
