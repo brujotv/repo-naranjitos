@@ -1,3 +1,0 @@
-id="plugin.program.stephen-buildswizard"
-version="0.2.4"
-zip="http://stephen-builds.uk/zip/plugin.program.SupremacyWizard-0.2.4.zip"
