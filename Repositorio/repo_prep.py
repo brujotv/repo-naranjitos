@@ -22,7 +22,7 @@ If you do this you must make sure the "datadir zip" parameter in the addon.xml o
 """
 import os
 import shutil
-import md5
+import hashlib
 import zipfile
 import re
 
@@ -44,21 +44,27 @@ else: standalone = False
 # set the repository's root folder here, if the script user has not set a custom path.      
 if standalone:
             if repo_root == False: repo_root = os.getcwd()
-            print script_name + '  v' + str(revision_number)
-            print script_credits
-            print 'Homepage and updates: ' + homepage
-            print ' '
+            print(script_name + '  v' + str(revision_number))
+            print(script_credits)
+            print('Homepage and updates: ' + homepage)
+            print(' ')
             
 else:
             #so that we can import stuff from parent dir (settings)
             import sys
             sys.path.append('..')
             
-            import settings
-            repo_root = settings.aggregate_repo_path
-            # use repository aggregator settings.py to determine whether to compress
-            compress_addons = settings.compress_addons
+            try:
+                import settings
+                repo_root = settings.aggregate_repo_path
+                # use repository aggregator settings.py to determine whether to compress
+                compress_addons = settings.compress_addons
+            except ImportError:
+                # If settings module doesn't exist, use defaults
+                if repo_root == False: repo_root = os.getcwd()
 
+# Ensure repo_root is always a string
+if repo_root == False: repo_root = os.getcwd()
 
 def is_addon_dir( addon ):
     # this function is used by both classes.
@@ -105,7 +111,7 @@ class Generator:
                         if os.path.exists(_path): found_an_addon = True
 
                         # split lines for stripping
-                        xml_lines = open( _path, "r" ).read().splitlines()
+                        xml_lines = open( _path, "r", encoding="utf-8" ).read().splitlines()
 
                         # new addon
                         addon_xml = ""
@@ -115,14 +121,14 @@ class Generator:
                             # skip encoding format line
                             if ( line.find( "<?xml" ) >= 0 ): continue
                             # add line
-                            addon_xml += unicode( line.rstrip() + "\n", "UTF-8" )
+                            addon_xml += line.rstrip() + "\n"
 
                         # we succeeded so add to our final addons.xml text
                         addons_xml += addon_xml.rstrip() + "\n\n"
 
-            except Exception, e:
+            except Exception as e:
                 # missing or poorly formatted addon.xml
-                print "Excluding %s for %s" % ( _path, e, )
+                print("Excluding %s for %s" % ( _path, e, ))
 
         # clean and add closing tag
         addons_xml = addons_xml.strip() + u"\n</addons>\n"
@@ -134,8 +140,8 @@ class Generator:
                     self._generate_md5_file()
        
                     # notify user
-                    print "Updated addons xml and addons.xml.md5 files"
-        else: print "Could not find any addons, so script has done nothing."
+                    print("Updated addons xml and addons.xml.md5 files")
+        else: print("Could not find any addons, so script has done nothing.")
 
         
 
@@ -143,24 +149,30 @@ class Generator:
     def _generate_md5_file( self ):
         try:
             # create a new md5 hash
-            m = md5.new( open( self.addons_xml ).read() ).hexdigest()
+            with open( self.addons_xml, 'rb' ) as f:
+                m = hashlib.md5(f.read()).hexdigest()
 
             # save file
             self._save_file( m, self.addons_xml_md5 )
 
-        except Exception, e:
+        except Exception as e:
             # oops
-            print "An error occurred creating addons.xml.md5 file!\n%s" % ( e, )
+            print("An error occurred creating addons.xml.md5 file!\n%s" % ( e, ))
 
     def _save_file( self, data, the_path ):
         try:
             
             # write data to the file
-            open( the_path, "w" ).write( data )
+            if isinstance(data, bytes):
+                with open( the_path, "wb" ) as f:
+                    f.write( data )
+            else:
+                with open( the_path, "w", encoding="utf-8" ) as f:
+                    f.write( data )
 
-        except Exception, e:
+        except Exception as e:
             # oops
-            print "An error occurred saving %s file!\n%s" % ( the_path, e, )
+            print("An error occurred saving %s file!\n%s" % ( the_path, e, ))
 
 
 
@@ -209,7 +221,7 @@ class Compressor:
                                if addon_xml_exists:
                                        # now addon.xml has been read, scrape version number from it. we need this when naming the zip (and if it exists the changelog)
                                        self._read_version_number()
-                                       print 'Create compressed addon release for -- ' + self.addon_name + '  v' + self.addon_version_number
+                                       print('Create compressed addon release for -- ' + self.addon_name + '  v' + self.addon_version_number)
                                        self._create_compressed_addon_release()
 
    def _get_zipped_addon_path( self ):
@@ -223,7 +235,7 @@ class Compressor:
        self.addon_zip_path = None
        return False
     
-   def _extract_addon_xml_to_release_folder():
+   def _extract_addon_xml_to_release_folder(self):
            the_zip = zipfile.ZipFile( self.addon_zip_path, 'r' )
            for filename in the_zip.namelist():
                         if filename.find('addon.xml'):
@@ -284,9 +296,8 @@ class Compressor:
       if os.path.exists( addon_xml_path ):
                          
                     # load whole text into string
-                    f = open( addon_xml_path, "r") 
-                    self.addon_xml = f.read()
-                    f.close()
+                    with open( addon_xml_path, "r", encoding="utf-8") as f:
+                        self.addon_xml = f.read()
 
                     # return True if we found and read the addon.xml 
                     return True
@@ -295,7 +306,7 @@ class Compressor:
 
    def _read_version_number( self ):
       # find the header of the addon.
-      headers = re.compile( "\<addon id\=(.+?)>", re.DOTALL ).findall( self.addon_xml )
+      headers = re.compile( r"\<addon id\=(.+?)>", re.DOTALL ).findall( self.addon_xml )
 
       for header in headers:
 
@@ -306,8 +317,9 @@ class Compressor:
                               header = re.sub( "'",'', header )
                               
                               # scrape the version number from the line
-                              self.addon_version_number = (( re.compile( "version\=(.+?) " , re.DOTALL ).findall( header ) )[0]).strip()
-              
+                              version_match = re.compile( r"version\=(.+?) " , re.DOTALL ).findall( header )
+                              if version_match:
+                                  self.addon_version_number = version_match[0].strip()
 
 
 def execute():
