@@ -27,9 +27,9 @@ IMPORTANTE: Requiere instalar previamente:
 </addon>
 
 <addon id="plugin.video.Naranjitomatrix"
-       name="[COLOR orange]Naranjitos[/COLOR]"
+       name="[COLOR orange]Naranjito[/COLOR]"
        version="1.2.1+matrix"
-       provider-name="Naranjitos">
+       provider-name="Naranjito">
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests"/>
@@ -40,8 +40,35 @@ IMPORTANTE: Requiere instalar previamente:
 	<provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-	 <summary lang="en">Creado por Naranjitos</summary>
-    <description lang="en">Naranjitos 2017</description>
+	 <summary lang="en">Creado por Naranjito</summary>
+    <description lang="en">Naranjito 2017</description>
+    <disclaimer lang="en"></disclaimer>
+	<platform>all</platform>
+	<assets>
+       <icon>icon.png</icon>
+       <fanart>fanart.jpg</fanart>
+</assets>
+	<news>news
+	</news>
+</extension>
+</addon>
+
+<addon id="plugin.video.pornokodi"
+       name="[COLOR orange]pornokodi[/COLOR]"
+       version="1.2.1"
+       provider-name="pornokodi">
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.simplejson"/>
+	<import addon="script.module.kodi-six" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+	 <summary lang="en">Creado por pornokodi</summary>
+    <description lang="en">pornokodi</description>
     <disclaimer lang="en"></disclaimer>
 	<platform>all</platform>
 	<assets>
