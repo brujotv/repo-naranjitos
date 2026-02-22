@@ -18,10 +18,6 @@
         <assets>
               <icon>icon.png</icon>
               <fanart>fanart.jpg</fanart>
-              <screenshot>resources/media/Captura1.png</screenshot>
-              <screenshot>resources/media/Captura2.png</screenshot>
-              <screenshot>resources/media/Captura3.png</screenshot>
-              <screenshot>resources/media/Captura4.png</screenshot>
         </assets>
         <news>
             - Añadido soporte para enlaces magnet-torrent
