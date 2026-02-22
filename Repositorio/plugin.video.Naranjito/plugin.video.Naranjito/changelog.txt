@@ -1,4 +1,0 @@
-﻿Version 1.2.1
-mejora de imagen
-añadido ciñe
-tdt estable
