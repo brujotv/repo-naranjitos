@@ -4,7 +4,7 @@
         <dir minversion="21.0.0">
             <info>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/brujotv/repo-naranjitos/master/Repositorio/</datadir>
+            <datadir zip="true">https://github.com/brujotv/repo-naranjitos/tree/master/Repositorio</datadir>
             <hashes>sha256</hashes>
         </dir>
     </extension>
