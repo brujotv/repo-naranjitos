@@ -1,8 +1,8 @@
 <?xml version="3.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.Naranjitomatrix"
-       name="[COLOR orange]Naranjitos[/COLOR]"
+       name="[COLOR orange]Naranjito[/COLOR]"
        version="1.2.1+matrix"
-       provider-name="Naranjitos">
+       provider-name="Naranjito">
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests"/>
@@ -13,8 +13,8 @@
 	<provides>video</provides>
 </extension>   
 <extension point="xbmc.addon.metadata">
-	 <summary lang="en">Creado por Naranjitos</summary>
-    <description lang="en">Naranjitos 2017</description>
+	 <summary lang="en">Creado por Naranjito</summary>
+    <description lang="en">Naranjito 2017</description>
     <disclaimer lang="en"></disclaimer>
 	<platform>all</platform>
 	<assets>
