@@ -99,6 +99,34 @@ IMPORTANTE: Requiere instalar previamente:
 </extension>
 </addon>
 
+<addon id="plugin.video.supercine"
+       name="SuperCine"
+       version="1.0.0"
+       provider-name="SuperCine">
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <icon>icon.png</icon>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary>Catálogo de películas con lista completa y búsqueda por año, género o título. Fuente: SuperCine.</summary>
+        <description>Addon de vídeo para Kodi que muestra el catálogo de películas de SuperCine.
+
+Opciones:
+• Ver toda la lista: navega por el catálogo completo.
+• Buscar por año: filtra películas por año de estreno.
+• Buscar por género: filtra por género (Acción, Comedia, Drama, Terror, etc.).
+• Buscar por título: busca por nombre de película.
+
+Requiere el plugin Elementum para reproducir los enlaces (magnet/torrent).</description>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+    </extension>
+</addon>
+
 <addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.5">
     <requires>
         <!--<import addon="xbmc.python" version="3.0.0"/>-->
